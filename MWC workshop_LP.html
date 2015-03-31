@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://abs.twimg.com/favicons/favicon.ico">
+<title>#MWC15 | Twitter Workshops</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://img.en25.com/i/livevalidation_standalone.compressed.js" type="text/javascript"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="https://abs.twimg.com/font/gotham-narrow-v1.css" media="all">  
+	
+		<script type="text/javascript">
+		$( document ).ready(function() {
+
+          	// Javascript to enable link to tab
+           // var hash = document.location.hash;
+           // var prefix = "tab_";
+           // if (hash) {
+           //     $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
+           // } 
+            
+            // Change hash for page-reload
+            //$('.nav-tabs a').on('shown.bs.tab', function (e) {
+            //    window.location.hash = e.target.hash.replace("#", "#" + prefix);
+//});
+          
+			//TABS
+			//$('#tabs .nav-tabs a').click(function (e) {
+			//	e.preventDefault()
+			//	$(this).tab('show')
+			//})
+			
+			//FOLLOW
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		  	
+		
+		});
+		
+			//form validation
+			function validate(){   
+		        // Vars
+		        var firstName = $('#field0').val();
+		        var lastName = $('#field1').val();
+		        var emailAddress = $('#field2').val();
+		        var company = $('#field3').val();
+		        var jobtitle = $('#field4').val();
+          		//var username = $('#field5').val();
+		
+		
+				$( '.required' ).each(function() {
+					if( !$(this).val() ) {
+						$(this).addClass('input_error');
+					}
+				});
+				
+				$( '.required' ).blur(function() {
+					if( $(this).val().length ) {
+						$(this).removeClass('input_error');
+					}
+				});
+				
+				var puppies = $('input:checkbox:checked');
+				if(puppies.length == 0){
+					alert('Please select at least one workshop');
+					return false;
+				}
+								
+				var emailTest = isEmail( emailAddress );
+				if(emailTest == false) {
+					$('#field2').addClass('input_error');
+				}
+				
+				//var phoneTest = validatePhone( busPhone );
+				//if(phoneTest == false) {
+				//	$('#field3').addClass('input_error');
+				//}
+				
+		        // Validate input
+				
+		        if(firstName == ""){
+		            alert("Please include your first name.");
+		            return false;
+		        }
+		
+		        if(lastName == ""){
+		            alert("Please include your last name.");
+		            return false;
+		        }
+		        				 
+		        if(emailAddress == ""){
+		            alert("Please include your email address.");
+		            return false;
+		        }
+		        
+		        if(emailTest == false) {
+					alert("Please include a valid email address.");
+					return false;
+				}
+				
+				//if(busPhone == "") {
+				//	alert("Please include a phone number.");
+		    	//	return false;
+				//}
+				
+				//if(phoneTest == false) {
+				//	alert("Please include a valid phone number.");
+				//	return false;
+				//}
+				
+				if(company == ""){
+		            alert("Please include your company name.");
+		            return false;
+		        }
+				
+				if(jobtitle == ""){
+		            alert("Please include your job title.");
+		            return false;
+		        }
+          
+				//if(username == ""){
+		        //    alert("Please include your personal Twitter username.");
+		        //    return false;
+		        //}
+
+			}
+
+			function isEmail(email) {
+				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				return regex.test(email);
+			}
+			
+			//function validatePhone(txtPhone) {
+			//    var a = document.getElementById('field3').value;
+			//    var filter = /^[0-9-+]+$/;
+			//	    if (filter.test(a)) {
+			//	        return true;
+			//	    }
+			//	    else {
+			//	        return false;
+			//	    }
+			//}
+
+	</script>
+
+
+	<style>
+		body {
+			font-family: Gotham, 'Gotham Narrow', Arial, san-serif;
+			background-color: #292f33;
+			background:url(http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{d748d9a6-c86e-46ed-8ba1-22cd741a8407}_MWC15-workshop-background.png) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			color: #ffffff;
+		}
+
+		
+		.content {
+			width: 800px;
+			margin: 0 auto;
+			text-align: left;
+			padding: 40px;
+			padding-top: 20px;
+		}
+		
+		.banner {
+			margin-top: 50px;
+		}
+		
+		#larry {
+			padding-bottom: 10px;
+			padding-right: 20px;
+		}
+		
+		.line {
+			width: 100%;
+			border-bottom: 1px solid white;
+			margin: 40px 0;
+		}
+		
+		#header {
+			width: 550px;
+		}
+				
+		.title {
+			padding: 20px 0;
+			color: white;
+			letter-spacing: 12px;
+			font-size: 40px;
+			font-weight: ;
+		}
+		
+		h1 {
+			font-size: 60px;
+			letter-spacing: normal;
+			font-weight: 100;
+		}
+		
+		.text {
+			font-size: 16px;
+			letter-spacing: normal;
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+		
+		label {
+			font-weight: normal;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		
+		input[type=text] {
+			border-radius: 3px;
+			border: 2px solid #ccd6dd;
+			-webkit-box-shadow: none !important;
+			-moz-box-shadow: none !important;
+			box-shadow: none !important;
+		}
+		
+		div.preface-input { position: relative; }
+		div.preface-input span.preface { position: absolute; top: 6px; left: 13px; color: #999; display: block; line-height: 25px; }
+		div.preface-input input[type="text"] { padding-left: 27px; }
+	
+		.btn {
+			height: 40px;
+			margin-top: 15px;
+			background-color: #bbddf5;
+			color: #2a9fd5;
+			border: 0;
+			border-radius: 2px;
+			letter-spacing: 3px;
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.43);
+		}  
+		
+		.footer {
+			margin-top: 10px;
+			padding-top: 30px;
+			background-color: white;
+			border-top: 1px #999999 solid;
+		}   
+		
+		input[type=checkbox] {
+			/* Double-sized Checkboxes */
+			-ms-transform: scale(2); /* IE */
+			-moz-transform: scale(2); /* FF */
+			-webkit-transform: scale(2); /* Safari and Chrome */
+			-o-transform: scale(2); /* Opera */
+			padding: 10px 5px 10px 5px;
+			margin-bottom: 5px;
+			margin-right: 15px;
+			float: left;
+		}
+		
+		.workshops {
+			padding-bottom: 20px;
+			padding-left: 65px;
+		}
+
+				
+		.copy {
+			background-color: #55acee;
+			color: white;
+			height: 30px;
+			position:fixed;
+			left:0;
+			bottom:0;
+			width:100%;
+			font-size: 11px;
+			display: table;
+			padding-right: 20px;
+			z-index: 11;
+		}
+		
+		.innerfoot {
+			display: table-cell;
+			vertical-align: middle;
+      		text-transform: uppercase;
+		}
+
+		
+	@media all and (max-width: 768px) {
+		#header {
+			width: 90% !important;
+		}
+		
+		.title {
+			letter-spacing: 5px;
+		}
+		
+		.content {
+			width: 90%;
+		}
+		
+		.mobilehide {
+			display: none;
+		}
+		
+	}
+	
+	@media all and (max-width: 990px) {
+		
+		.content {
+			height: auto !important;
+			overflow: hidden !important;
+		}
+	}
+	
+	@media all and (max-width: 815px) {
+	
+		.workshops {
+			padding-left: 0px !important;
+		}
+		
+	}
+	
+	@media all and (max-width: 396px) {
+		
+		.title {
+			font-size: 20px;
+		}
+		
+		.content {
+			padding: 20px;
+		}
+
+	}
+
+			
+	</style>
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<!--
+		<div class="topbar">
+			<div class="innerfoot">
+				<img src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{d1532fff-c000-4ece-94e8-8835b3c11cb3}_white-bird_54px.png" width="35">
+			</div>
+		</div>
+		-->
+
+
+		<div class="content">			
+
+		    <!--Form1-->
+		    <div>	
+				<div class="title text-center">
+					<img id="larry" src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{49ecd8f4-30cc-44e0-9737-78971ba81d95}_Twitter_logo_white_34.png"><strong>#MWC</strong>15
+					<p class="line"></p>
+					
+					<h4>REGISTRATION</h4>
+					
+					<h1>Twitter Workshops</h1>
+					
+					
+					<p class="line"></p>
+					
+					<div class="text">Select a Workshop to attend at Mobile World Congress, Hall 8.0, Theatre B:</div>
+					
+				</div>
+	    		<form method="post" name="MWC15Workshops" action="https://s1259914507.t.eloqua.com/e/f2" id="form602" onsubmit="return validate();">
+				<input value="MWC15Workshops" type="hidden" name="elqFormName">
+				<input value="1259914507" type="hidden" name="elqSiteId">
+				<input name="elqCampaignId" type="hidden">
+					
+					<div class="workshops">
+						<div class="form-group">
+							<input name="ios" type="checkbox" name=""> <strong>Building the Best Mobile Apps with Fabric - iOS and Android Developers</strong> <br>March 3, 11:00 AM - 12:00 PM
+						</div>
+						<div class="form-group">
+							<input name="brand" type="checkbox" name=""> <strong>Driving User Growth and App Engagement with Twitter - Brand App Marketers</strong> <br>March 3, 10:00 AM - 11:00 AM
+						</div>
+						<div class="form-group">
+							<input name="games" type="checkbox" name=""> <strong>Driving User Growth and App Engagement with Twitter - Games App Marketers</strong> <br>March 3, 12:00 PM - 1:00 PM
+						</div>
+					</div>
+				
+					<div class="row ">
+						<div class="col-md-6 form-group">
+							<label>First name*</label>
+							<input name="firstName" type="text" class="form-control" id="field0" value="<eloqua type='emailfield' syntax='First_Name___Forms1' />">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Last name*</label>
+							<input name="lastName" type="text" class="form-control" id="field1" value="<eloqua type='emailfield' syntax='LastName' />">
+						</div>
+					</div>
+					<div class="row ">
+						<div class="col-md-6 form-group">
+							<label>Email address*</label>
+						<input name="emailAddress" type="text" class="form-control" id="field2" value="<eloqua type='emailfield' syntax='EmailAddress' />">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Company*</label>
+						<input name="company" type="text" class="form-control" id="field3" value="<eloqua type='emailfield' syntax='Company' />">
+						</div>
+					</div>
+					
+					
+					<div class="row ">
+						<div class="col-md-6 form-group">
+							<label>Job title*</label>
+							<input id="field4" type="text" name="jobtitle" class="form-control">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Twitter @username*</label>
+							<div class="preface-input"><span class="preface">@</span><input name="screenname" type="text" class="form-control" id="field5" value="<eloqua type='emailfield' syntax='Username1' />"></div>
+						</div>
+					</div>	
+																							
+					<button type="submit" id="submit" class="btn btn-primary btn-block">Ready for #MWC15<span class="mobilehide"></span></button>
+				</form>
+			</div>
+			
+		</div>
+
+
+  </div>
+  <!--FOOTER--
+		<div class="copy text-center">
+			<div class="innerfoot">
+				Space is limited. First-come, first-served. Must be 21+ to enter. &copy; Twitter 2014
+			</div>
+		</div>
+		<!--/FOOTER-->	
+</body>
+</html>

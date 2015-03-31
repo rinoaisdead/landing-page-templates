@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://abs.twimg.com/favicons/favicon.ico">
+	<title>#FurtherFaster Madrid</title>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://img.en25.com/i/livevalidation_standalone.compressed.js" type="text/javascript"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="https://abs.twimg.com/font/gotham-narrow-v1.css" media="all">  
+
+<script type="text/javascript">
+		//$(document).ready(function() {
+		//    $('.carousel').carousel({interval: 4000});
+		//  });
+		
+		//FOLLOW
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+		  
+		//modal active when page loads
+		$(window).load(function(){
+        	$('#myModal').modal('show');
+		});
+		  
+		  
+		//form validation
+		function validate(){   
+		// Vars
+			var firstName = $('#field0').val();
+			var lastName = $('#field1').val();
+			var emailAddress = $('#field2').val();
+			var company = $('#field3').val();
+			var jobtitle = $('#field4').val();
+			//var country = $('#field4').val();
+			
+			
+			$( '.required' ).each(function() {
+				if( !$(this).val() ) {
+					$(this).addClass('input_error');
+				}
+			});
+			
+			$( '.required' ).blur(function() {
+				if( $(this).val().length ) {
+					$(this).removeClass('input_error');
+			}
+			});
+			
+			
+			var emailTest = isEmail( emailAddress );
+				if(emailTest == false) {
+					$('#field2').addClass('input_error');
+			}
+			
+		
+		// Validate input
+		
+			if(firstName == ""){
+				alert("Please include your first name.");
+				return false;
+			}
+			
+			if(lastName == ""){
+				alert("Please include your last name.");
+				return false;
+			}
+				 
+			if(emailAddress == ""){
+				alert("Please include your email address.");
+				return false;
+			}
+			
+			if(emailTest == false) {
+				alert("Please include a valid email address.");
+				return false;
+			}
+			
+			if(company == ""){
+				alert("Please include your company name.");
+				return false;
+			}
+			
+			if(country == ""){
+				alert("Please include your job title.");
+				return false;
+			}
+			
+		}
+			
+			function isEmail(email) {
+				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				return regex.test(email);
+			}
+		
+</script>
+	
+<style>
+
+	
+	body {
+		font-family: 'Gotham Narrow', Helvetica, Arial, san-serif;
+		background-image: url(http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{3a56019b-ad5b-4ddd-9629-6d080cf6d27e}_FurtherFaster_panel1.png);
+		background-attachment: fixed;
+		font-size: 16px;
+
+	}
+	
+	#logo {
+		width: 70px;
+		padding-bottom: 20px;
+	}
+	
+	.wrapper {
+		position: relative;
+	}
+	
+	.box {
+		width: 80%;
+		margin: 0 auto 0 auto;
+		padding-bottom: 80px;
+		padding-top: 80px;
+		z-index: 1;
+		position: relative;
+	}
+	
+	.intro {
+		color: #ffffff;
+
+	}
+	
+	.panel1 {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 550px;
+	}
+	
+	.panel2 {
+		width: 100%;
+		overflow: hidden;
+		background-attachment: fixed;
+		background-repeat: repeat-x repeat-y;
+	}
+	
+	.background {
+		background-color: rgba(255,255,255, 0.8);
+		padding-top: 40px;
+	}
+	
+	
+	.line {
+		border-top: solid 1px #999999;
+		width: 60%;
+		margin: 40px auto 40px auto;
+	}
+	
+	.details {
+		
+	}
+	
+	.title {
+		font-size: 45px;
+		font-weight: bold;
+		text-shadow: 2px 2px 2px #000001;
+		color: #ffffff;
+	}
+	
+	.btn {
+		height: 45px;
+		margin-top: 20px;
+		border: 0;
+		font-weight: bold;
+		font-size: 20px;
+		padding-top: 8px;
+	}
+	
+	.btn1 {
+		width: 100%
+	}
+	
+	.btn2 {
+		width: 350px;
+		height: 50px;
+	}
+	
+	.footer {
+		margin: 0 auto;
+		width: 100%;
+		height: 30px;
+		vertical-align: middle;
+		line-height: 35px;
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	
+	
+	
+@media all and (max-width: 600px){ 
+	.modal {
+		width: 95% !important;
+	}
+	
+	.title {
+		font-size: 35px;
+	}
+	
+	.btn {
+		width: 90% !important;
+	}
+
+}
+	
+
+</style>
+
+</head>
+
+<body>
+			<div class="wrapper">
+				<div class="panel1"></div>
+				
+				<div class="box">
+					
+					<div class="text-center">
+						<div>
+							<br>
+							<img id="logo" src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{5720ef4f-e05c-4081-98b1-e795f7452f70}_Bird_vector_55acee.png">
+							<p class="title">#FurtherFaster Madrid</p>
+							<br>
+							<h4 class="intro">Apúntate a #FurtherFaster el próximo jueves 16 de octubre a las 19h. Comparte un rato con el equipo de Twitter y conoce de primera mano las nuevas herramientas de respuesta directa, los casos de éxito de las marcas y la relación entre Twitter y la TV. </h4>
+							<br>
+							<a data-toggle="modal" data-target="#myModal"><button type="button" class="btn btn-primary btn2">Regístrate ahora</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Panels -->
+			<div class="panel2">
+			<div class="background">
+				<div class="text-center">
+					<h3>Detalles del evento</h3>
+				</div><br>
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<h4>Lugar</h4>
+						<img src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{f69bf107-65bd-4c99-8fba-5d7a205887bc}_icon_Location.png" alt="Lugar" style="padding-bottom: 8px; width: 70px; font-size: 13px; font-weight: bold; color: #000001;">
+						<br>
+						Espacio Cómo, Calle Pradillo 60, 
+						28002 Madrid	
+						<br>
+						Metro: Alfonso XIII (L4)
+						<br><br>
+					</div>
+					<div class="col-md-4 text-center">
+						<h4>Fecha</h4>
+						<img src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{4b06d69f-ed18-4300-8efb-95d02b9abab8}_icon_Date.png" alt="Fecha:" style="padding-bottom: 13px; width: 70px; font-size: 13px; font-weight: bold; color: #000001;">
+						<br>
+						Jueves 16 de Octubre
+						<br><br>
+					</div>
+					
+					<div class="col-md-4 text-center">
+						<h4>Hora y Agenda</h4>
+						<img src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{fc57e337-444a-4e29-a8d8-982b400ebced}_icon_Time.png" alt="Time" style="padding-bottom: 13px; width: 70px; font-size: 13px; font-weight: bold; color: #000001;">
+						<br>
+						19:00 a 21:30
+						<br><br>
+					</div>
+				</div>
+				<p class="line"></p>
+				<div class="text-center">
+					<h3>Ponentes:</h3>
+				</div><br>
+				<div class="row text-center">
+					<div class="col-md-4">
+						Alex Gibelalde (<a href="https://twitter.com/alexgibelalde?elqTrack=true">@alexgibelalde</a>)<br>
+						<img src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{5d78a82c-2a17-4c4d-9c41-cd116e2fe691}_AlexGibalde_180.png"><br><br>
+					</div>
+					<div class="col-md-4">
+						Antonio Ábalos (<a href="https://twitter.com/abalos?elqTrack=true">@abalos</a>)<br>
+						<img src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{ea7524c4-cefe-4ff2-a288-a32bfb47d711}_AntonioAbalos_180.png"><br><br>
+					</div>
+					<div class="col-md-4">
+						Alfonso Calatrava (<a href="https://twitter.com/alcalatrava?elqTrack=true">@alcalatrava</a>)<br>
+						<img src="http://images.tweet.twitter.com/EloquaImages/clients/TwitterInc/{6db8d06a-9fcb-472f-9914-24531aa91f8d}_Alfonso_180.png"><br><br>
+					</div>
+				</div>
+				<p class="line"></p>
+				<div class="text-center">
+					<h3>Mapa</h3>
+				</div><br>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<embed width="90%" height="200" frameborder="0" style="border: 1px #999999 solid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.0375338777249!2d-3.6687180999999676!3d40.44981390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228d6ca6c6ef9%3A0x28d0e51ddd1e6ee!2sCalle+de+Pradillo%2C+60%2C+28002+Madrid%2C+Spain!5e0!3m2!1sen!2sus!4v1410197996076&zoom=13">
+						
+					</div>
+						
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-md-12 footer">
+						<a href="https://twitter.com/TwitterSpain" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @TwitterSpain</a>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--/Panels-->			
+			<!-- Modal1 -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h4 class="modal-title" id="myModalLabel">Apúntate a #FurtherFaster el próximo jueves 16 de octubre a las 19h. Comparte un rato con el equipo de Twitter y conoce de primera mano las nuevas herramientas de respuesta directa, los casos de éxito de las marcas y la relación entre Twitter y la TV. </h4>
+						</div>
+						<div class="modal-body">
+							<!--form-->
+							<form method="post" name="FurtherFasterES" action="https://s1259914507.t.eloqua.com/e/f2" id="form419" onsubmit="return validate();">
+							<input value="FurtherFasterES" type="hidden" name="elqFormName">
+							<input value="1259914507" type="hidden" name="elqSiteId">
+							<input name="elqCampaignId" type="hidden">
+							
+								<div class="form-group">
+									<label>Nombre*</label>
+									<input value="<eloqua type='emailfield' syntax='First_Name___Forms1' />" name="firstName" type="text" class="form-control" id="field0">
+								</div>
+								<div class="form-group">
+									<label>Apellidos*</label>
+									<input value="<eloqua type='emailfield' syntax='LastName' />" name="lastName" type="text" class="form-control" id="field1">
+								</div>
+								<div class="form-group">
+									<label>Email*</label>
+									<input value="<eloqua type='emailfield' syntax='EmailAddress' />" name="emailAddress" type="text" class="form-control" id="field2">
+								</div>
+								<div class="form-group">
+									<label>Agencia*</label>
+									<input value="<eloqua type='emailfield' syntax='Company' />" name="company" type="text" class="form-control" id="field3">
+								</div>
+								<div class="form-group">
+									<label>Cargo*</label>
+										<select class="form-control" id="field4" name="jobtitle">
+											<option value="" >Please select</option>
+											<option value="C-Level" >C-Level</option>
+											<option value="VP" >VP</option>
+											<option value="Owner" >Owner</option>
+											<option value="Director" >Director</option>
+											<option value="Manager" >Manager</option>
+											<option value="Individual Contributor" >Individual Contributor</option>
+										</select>
+
+								</div>
+								<div class="form-group">
+									<label>Nombre de usuario en Twitter</label>
+									<input value="<eloqua type='emailfield' syntax='Username1' />" name="handle" type="text" class="form-control" id="field4">
+								</div>
+								
+		
+								<button type="submit" id="submit" class="btn btn-primary btn-block btn1">Regístrate ahora</button>
+							</form>	
+							
+							<!--/form-->	
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+			
+</body>
